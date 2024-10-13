@@ -2,12 +2,12 @@
 import platform
 
 # Install required packages
-%pip install -q "openvino>=2023.1.0" "nncf>=2.6.0" torch torchvision tqdm --extra-index-url https://download.pytorch.org/whl/cpu
+# %pip install -q "openvino>=2023.1.0" "nncf>=2.6.0" torch torchvision tqdm --extra-index-url https://download.pytorch.org/whl/cpu
 
-if platform.system() != "Windows":
-    %pip install -q "matplotlib>=3.4"
-else:
-    %pip install -q "matplotlib>=3.4,<3.7"
+# if platform.system() != "Windows":
+#     %pip install -q "matplotlib>=3.4"
+# else:
+#     %pip install -q "matplotlib>=3.4,<3.7"
 
 # %%
 # from pathlib import Path
@@ -30,7 +30,7 @@ else:
 
 # if not Path(model_repo).exists():
 
-!git clone https://github.com/pytorch/vision.git
+# !git clone https://github.com/pytorch/vision.git
 
 # sys.path.append(model_repo)
 
@@ -225,11 +225,11 @@ print(f"Accuracy of the optimized model: {optimized_accuracy[0] * 100 :.2f}%")
 
 # %%
 # Inference FP16 model (OpenVINO IR)
-!benchmark_app -m "model/mobilenet_v2.xml" -d $device.value -api async -t 15
+# !benchmark_app -m "model/mobilenet_v2.xml" -d $device.value -api async -t 15
 
 # %%
 # Inference INT8 model (OpenVINO IR)
-!benchmark_app -m "model/quantized_mobilenet_v2.xml" -d $device.value -api async -t 15
+#!benchmark_app -m "model/quantized_mobilenet_v2.xml" -d $device.value -api async -t 15
 
 # %%
 # Define all possible labels from the CIFAR10 dataset
