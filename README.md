@@ -7,22 +7,21 @@ to tell whether it is within or not within regulations.
 ## Table of Contents
 - [Installation Instructions](#installation-instructions)
 - [Usage](#usage)
-- [Examples](#examples)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
 ## Installation Instructions
-1. Install prerequisites.
-2. Clone the repository.
-3. Run installation commands.
+1. Install prerequisites: python, OpenVINO, torch, torchvision, torch.nn, tqdm, ipywidgets, nncf, google.generativeAI, firebase_admin, PYPDF2
+2. Clone the repository
+3. Run the programs. 
 
 ## Usage
 The user will use the project by uploading an image and text information into the website, which the model will then suggest if it is within safety regulations or not.
 
 
 ## Features
-- List of key features.
+- Image classification using a CNN
+- Image to text for classification
 
 ## API Reference
 Used google Gemeni and Intel OpenVINO. 
