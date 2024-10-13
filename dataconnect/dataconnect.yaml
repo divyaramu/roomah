@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "roomah"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "roomah-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

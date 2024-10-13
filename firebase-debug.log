@@ -1,0 +1,241 @@
+[debug] [2024-10-13T03:49:35.090Z] ----------------------------------------------------------------------
+[debug] [2024-10-13T03:49:35.093Z] Command:       /opt/homebrew/Cellar/node/22.2.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2024-10-13T03:49:35.093Z] CLI Version:   13.22.0
+[debug] [2024-10-13T03:49:35.093Z] Platform:      darwin
+[debug] [2024-10-13T03:49:35.093Z] Node Version:  v22.2.0
+[debug] [2024-10-13T03:49:35.094Z] Time:          Sat Oct 12 2024 20:49:35 GMT-0700 (Pacific Daylight Time)
+[debug] [2024-10-13T03:49:35.094Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-13T03:49:35.097Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-13T03:49:35.097Z] > authorizing via signed-in user (carolynchristopherchen@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/user/Developer/Hackathons/DubHacks24/roomah
+
+[info] 
+=== Account Setup
+[info] 
+[info] Which account do you want to use for this project? Choose an account or add a new one now
+[info] 
+[debug] [2024-10-13T03:49:45.020Z] setProjectAccount(/Users/user/Developer/Hackathons/DubHacks24/roomah, carolynchristopherchen@gmail.com)
+[info] 
+[info] ✔  Using account: carolynchristopherchen@gmail.com 
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-13T03:49:47.169Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:47.169Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:47.171Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-10-13T03:49:47.463Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-10-13T03:49:47.463Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project roomah-f34c2 (RoomaH) 
+[info] 
+=== Dataconnect Setup
+[debug] [2024-10-13T03:49:48.217Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:48.217Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:48.218Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/roomah-f34c2/billingInfo [none]
+[debug] [2024-10-13T03:49:48.818Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/roomah-f34c2/billingInfo 200
+[debug] [2024-10-13T03:49:48.818Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/roomah-f34c2/billingInfo {"name":"projects/roomah-f34c2/billingInfo","projectId":"roomah-f34c2","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2024-10-13T03:49:48.819Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:48.819Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:48.819Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/sqladmin.googleapis.com [none]
+[debug] [2024-10-13T03:49:48.819Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/sqladmin.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:49:49.248Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/sqladmin.googleapis.com 200
+[debug] [2024-10-13T03:49:49.248Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/sqladmin.googleapis.com [omitted]
+[info] ✔  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  dataconnect/dataconnect.yaml is unchanged 
+[info] i  dataconnect/schema/schema.gql is unchanged 
+[info] i  Skipping write of dataconnect/connector/connector.yaml 
+[info] i  dataconnect/connector/queries.gql is unchanged 
+[info] i  dataconnect/connector/mutations.gql is unchanged 
+[info] ✔  Detected WEB app in directory /Users/user/Developer/Hackathons/DubHacks24/roomah 
+[info] i  Wrote new config to /Users/user/Developer/Hackathons/DubHacks24/roomah/dataconnect/connector/connector.yaml 
+[info] I1012 20:49:55.133445    6593 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "/Users/user/Developer/Hackathons/DubHacks24/roomah/dataconnect-generated/js/default-connector"
+I1012 20:49:55.138852    6593 generate.go:40] Generated all sources. Writing them to disk...
+I1012 20:49:55.139884    6593 collector.go:107] connector "default" javascriptSdk wrote into "/Users/user/Developer/Hackathons/DubHacks24/roomah/dataconnect-generated/js/default-connector"
+Generated sources: index.d.ts [264B] esm/index.esm.js [179B] esm/package.json [17B] index.cjs.js [220B] package.json [623B] 
+I1012 20:49:55.149906    6593 installsdk.go:48] Package @firebasegen/default-connector is already installed. Skipping installation
+
+[info] i  Generated SDK code for default 
+[info] ✔  If you'd like to add more generated SDKs to your app your later, run firebase init dataconnect:sdk again 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/roomah-f34c2/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[debug] [2024-10-13T03:49:55.154Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:55.154Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:55.154Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/firestore.googleapis.com [none]
+[debug] [2024-10-13T03:49:55.154Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/firestore.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:49:55.348Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/firestore.googleapis.com 200
+[debug] [2024-10-13T03:49:55.348Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/firestore.googleapis.com [omitted]
+[debug] [2024-10-13T03:49:55.348Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:55.348Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:55.349Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default) [none]
+[debug] [2024-10-13T03:49:55.718Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default) 200
+[debug] [2024-10-13T03:49:55.718Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default) {"name":"projects/roomah-f34c2/databases/(default)","uid":"0335eee6-7411-4783-82c6-08b20ab974b9","createTime":"2024-10-13T03:46:17.346986Z","updateTime":"2024-10-13T03:46:17.346986Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-10-13T03:46:17.346986Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IKDKoui5iokDMKr/kIC5iokD"}
+[debug] [2024-10-13T03:49:55.718Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-10-13T03:49:55.719Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-10-13T03:49:55.719Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-13T03:49:55.720Z] > authorizing via signed-in user (carolynchristopherchen@gmail.com)
+[debug] [2024-10-13T03:49:55.720Z] [iam] checking project roomah-f34c2 for permissions ["firebase.projects.get"]
+[debug] [2024-10-13T03:49:55.720Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:55.720Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:55.721Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions [none]
+[debug] [2024-10-13T03:49:55.721Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:49:55.721Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-13T03:49:55.844Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions 200
+[debug] [2024-10-13T03:49:55.844Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-10-13T03:49:57.865Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:57.865Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:57.866Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/roomah-f34c2/releases pageSize=10&pageToken=
+[debug] [2024-10-13T03:49:58.009Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/roomah-f34c2/releases 200
+[debug] [2024-10-13T03:49:58.009Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/roomah-f34c2/releases {"releases":[{"name":"projects/roomah-f34c2/releases/cloud.firestore","rulesetName":"projects/roomah-f34c2/rulesets/d5cb559c-efc1-4b88-b581-2d1898b540a4","createTime":"2024-10-13T03:46:49.184097Z","updateTime":"2024-10-13T03:46:49.184097Z"}]}
+[debug] [2024-10-13T03:49:58.010Z] Found ruleset: projects/roomah-f34c2/rulesets/d5cb559c-efc1-4b88-b581-2d1898b540a4
+[debug] [2024-10-13T03:49:58.010Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:58.010Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:49:58.010Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/roomah-f34c2/rulesets/d5cb559c-efc1-4b88-b581-2d1898b540a4 [none]
+[debug] [2024-10-13T03:49:58.268Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/roomah-f34c2/rulesets/d5cb559c-efc1-4b88-b581-2d1898b540a4 200
+[debug] [2024-10-13T03:49:58.268Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/roomah-f34c2/rulesets/d5cb559c-efc1-4b88-b581-2d1898b540a4 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-10-13T03:50:00.257Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:00.257Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:00.258Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:00.258Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:00.258Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-10-13T03:50:00.260Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-10-13T03:50:00.416Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-10-13T03:50:00.416Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-10-13T03:50:00.846Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-10-13T03:50:00.847Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/roomah-f34c2/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/roomah-f34c2/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Genkit Setup
+[debug] [2024-10-13T03:50:08.438Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-13T03:50:08.439Z] > authorizing via signed-in user (carolynchristopherchen@gmail.com)
+[debug] [2024-10-13T03:50:08.439Z] [iam] checking project roomah-f34c2 for permissions ["firebase.projects.get"]
+[debug] [2024-10-13T03:50:08.440Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.440Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.440Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions [none]
+[debug] [2024-10-13T03:50:08.440Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:50:08.440Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-13T03:50:08.508Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions 200
+[debug] [2024-10-13T03:50:08.508Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-13T03:50:08.509Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.509Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.509Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.509Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.509Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-10-13T03:50:08.509Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:50:08.511Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-10-13T03:50:08.511Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:50:08.916Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com 200
+[debug] [2024-10-13T03:50:08.916Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-10-13T03:50:08.917Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.917Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:08.917Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-10-13T03:50:08.917Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:50:08.920Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com 200
+[debug] [2024-10-13T03:50:08.920Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-10-13T03:50:09.470Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-10-13T03:50:09.471Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-10-13T03:50:19.476Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:19.478Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T03:50:19.478Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-10-13T03:50:19.478Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T03:50:19.752Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com 200
+[debug] [2024-10-13T03:50:19.752Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/tsconfig.json 
+[info] ✔  Wrote functions/tsconfig.dev.json 
+[info] ✔  Wrote functions/src/index.ts 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+[info] Installing Genkit CLI
+[info] Start the Genkit developer experience by running:
+[info]     cd functions && genkit start
+[info] 
+=== Functions Setup
+[debug] [2024-10-13T04:00:05.793Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-13T04:00:05.795Z] > authorizing via signed-in user (carolynchristopherchen@gmail.com)
+[debug] [2024-10-13T04:00:05.796Z] [iam] checking project roomah-f34c2 for permissions ["firebase.projects.get"]
+[debug] [2024-10-13T04:00:05.801Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:00:05.801Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:00:05.803Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions [none]
+[debug] [2024-10-13T04:00:05.803Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T04:00:05.804Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-13T04:00:05.939Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions 200
+[debug] [2024-10-13T04:00:05.940Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/roomah-f34c2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-13T04:00:05.940Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:00:05.940Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:00:05.941Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:00:05.941Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:00:05.941Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-10-13T04:00:05.941Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T04:00:05.942Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-10-13T04:00:05.942Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/roomah-f34c2
+[debug] [2024-10-13T04:00:06.400Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com 200
+[debug] [2024-10-13T04:00:06.400Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-10-13T04:00:06.404Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com 200
+[debug] [2024-10-13T04:00:06.404Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/roomah-f34c2/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote roomah/package.json 
+[info] ✔  Wrote roomah/.eslintrc.js 
+[info] ✔  Wrote roomah/index.js 
+[info] ✔  Wrote roomah/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-10-13T04:01:19.105Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:01:19.107Z] Checked if tokens are valid: true, expires at: 1728794415865
+[debug] [2024-10-13T04:01:19.107Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/roomah-f34c2 [none]
+[debug] [2024-10-13T04:01:19.272Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/roomah-f34c2 200
+[debug] [2024-10-13T04:01:19.272Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/roomah-f34c2 {"projectId":"roomah-f34c2","projectNumber":"982339400590","displayName":"RoomaH","name":"projects/roomah-f34c2","resources":{"hostingSite":"roomah-f34c2"},"state":"ACTIVE","etag":"1_f973acd9-69e2-45c6-983a-92afad87a0f7"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
