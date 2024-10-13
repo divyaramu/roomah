@@ -153,20 +153,16 @@ val_loader = DataLoader(
 )
 
 # %%
-model.eval()
+import torch.nn as nn
 
-predictions = []
+for param in model.parameters():
+    param.requires_grad = False
 
-with torch.no_grad():  # Disable gradient calculation
-    for inputs, _ in dataloader:  # _ is the labels (we don't need them for inference)
-        outputs = model(inputs)
-        _, predicted = torch.max(outputs, 1)
-        predictions.extend(predicted.numpy())  # Collect predictions
+num_classes = 2
+model.fc = nn.Linear(model.fc.in_features, num_classes)
 
-# Convert predictions to a more interpretable format if needed
-predicted_classes = ['damaged' if pred == 0 else 'not_damaged' for pred in predictions]
-
-print(predicted_classes)
+for param in model.parameters():
+    param.requires_grad = True
 
 # %%
 import nncf
